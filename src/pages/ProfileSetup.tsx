@@ -74,10 +74,12 @@ function ProfileSetup(){
                     </label>
                 </div>
                 <button type='button' className='nextBtn' onClick={() => setStep(3)}>次へ</button>
+                <button type='button' className='backBtn' onClick={() => setStep(1)}>戻る</button>
             </div>
         )
     }
 
+    //好きなジャンル選択画面
     if(step === 3){
         return(
             <div className='profileSetup genreSelect'>
@@ -106,6 +108,7 @@ function ProfileSetup(){
     }
 
     return(
+        //自分についての情報入力画面
         <div className='profileSetup'>
             <h1>あなたについて教えてください</h1>
             <img src={guideCharacter} alt="ガイドキャラクター" />
