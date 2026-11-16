@@ -1,12 +1,14 @@
 import './App.css';
 // import ProfileSetup from "./pages/ProfileSetup";
-import SplashScreen from './pages/SplashScreen';
+// import SplashScreen from './pages/SplashScreen';
+import MyProfile from './pages/MyProfile';
 
 function App(){
   return(
     <div className="app">
       {/* <ProfileSetup /> */}
-      <SplashScreen />
+      {/* <SplashScreen /> */}
+      <MyProfile />
     </div>
   )
 }
