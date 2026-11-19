@@ -8,12 +8,17 @@ import diaryIcon from '../assets/diaryIcon.png';
 import homeIcon from '../assets/homeIcon.png';
 import mypageIcon from '../assets/mypageIcon.png';
 import editIcon from '../assets/editIcon.png';
+import charaHeadphone from '../assets/character/chara_headphone.png';
+import charaMike from '../assets/character/chara_mike.png';
+import charaNotes from '../assets/character/chara_notes.png';
+import charaSpeaker from '../assets/character/chara_speaker.png';
 
 function MyProfile(){
     const [isPublic,setIsPublic] = useState(false);
     return(
         <div className="myProfile">
             <div className='myInformation'>
+                <img src={charaHeadphone} alt="ヘッドホンのキャラクター" className='charaHeadphone'/>
                 <div className='profileActions'>
                     <button type='button'
                             className={`toggle ${isPublic ? 'active' : ''}`}
@@ -31,29 +36,36 @@ function MyProfile(){
                 <p className='introduction'>ここに自己紹介文が入ります</p>
             </div>
             <div className='favoriteArtists'>
-                <h2>Favorite Artists</h2>
+                <img src={charaNotes} alt="音符のキャラクター" className='charaNotes' />
+                <h2><span className='vivid'>F</span>avorite <span className='vivid'>A</span>rtists</h2>
                 <div className='artistList'>
                     <p>アーティスト1</p>
                     <p>アーティスト2</p>
                 </div>
             </div>
             <div className='playlist'>
-                <h2>Playlist</h2>
-                <div className='playlistItem'>
-                    <div className='songImg'></div>
-                    <p>真夜中のドライブ</p>
+                <div className='playlistHeading'>
+                    <img src={charaMike} alt="マイクのキャラクター" className='charaMike' />
+                    <h2><span className='purple'>P</span>laylist</h2>
                 </div>
-                <div className='playlistItem'>
-                    <div className='songImg'></div>
-                    <p>ビートを感じて</p>
-                </div>
-                <div className='playlistItem'>
-                    <div className='songImg'></div>
-                    <p>ビートを感じて</p>
+                <div className='playlistWrap'>
+                    <div className='playlistItem'>
+                        <div className='songImg'></div>
+                        <p>真夜中のドライブ</p>
+                    </div>
+                    <div className='playlistItem'>
+                        <div className='songImg'></div>
+                        <p>ビートを感じて</p>
+                    </div>
+                    <div className='playlistItem'>
+                        <div className='songImg'></div>
+                        <p>まるでメイドカフェ！？</p>
+                    </div>
                 </div>
             </div>
             <div className='cardCollection'>
-                <h2>Card Collection</h2>
+                <img src={charaSpeaker} alt="スピーカーのキャラクター" className='charaSpeaker' />
+                <h2><span className='yellow'>C</span>ard <span className='yellow'>C</span>ollection</h2>
                 <div className='cardList'>
                     <div className='cardImg'></div>
                     <div className='cardImg'></div>
